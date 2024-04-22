@@ -18,8 +18,8 @@ Nodes:
     ApiConfig:
       ApiHost: "http://98kjc.top"
       ApiKey: "WF64s154OJG5e465fbfrO5wSG5d6sdngn"
-      NodeID: 114
-      NodeType: Shadowsocks # Node type: V2ray, Trojan, Shadowsocks, Shadowsocks-Plugin
+      NodeID: 3
+      NodeType: V2ray # Node type: V2ray, Trojan, Shadowsocks, Shadowsocks-Plugin
       Timeout: 30 # Timeout for the api request
       EnableVless: false # Enable Vless for V2ray Type
       EnableXTLS: false # Enable XTLS for V2ray and Trojan
@@ -74,7 +74,7 @@ Nodes:
       ApiHost: "http://grxm.98kjc.top"
       ApiKey: "APKow556ws2ED53dfs6fDVF66fsE9sD"
       NodeID: 2
-      NodeType: Shadowsocks # Node type: V2ray, Trojan, Shadowsocks, Shadowsocks-Plugin
+      NodeType: V2ray # Node type: V2ray, Trojan, Shadowsocks, Shadowsocks-Plugin
       Timeout: 30 # Timeout for the api request
       EnableVless: false # Enable Vless for V2ray Type
       EnableXTLS: false # Enable XTLS for V2ray and Trojan
