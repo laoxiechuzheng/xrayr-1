@@ -237,10 +237,10 @@ Nodes:
       DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
       EnableProxyProtocol: false # Only works for WebSocket and TCP
       AutoSpeedLimitConfig:
-        Limit: 100
-        WarnTimes: 3
-        LimitSpeed: 30
-        LimitDuration: 30
+        Limit: 0
+        WarnTimes: 0
+        LimitSpeed: 0
+        LimitDuration: 0
       GlobalDeviceLimitConfig:
         Enable: false # Enable the global device limit of a user
         RedisNetwork: tcp # Redis protocol, tcp or unix
@@ -303,10 +303,10 @@ Nodes:
       DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
       EnableProxyProtocol: false # Only works for WebSocket and TCP
       AutoSpeedLimitConfig:
-        Limit: 100
-        WarnTimes: 3
-        LimitSpeed: 30
-        LimitDuration: 30
+        Limit: 0
+        WarnTimes: 0
+        LimitSpeed: 0
+        LimitDuration: 0
       GlobalDeviceLimitConfig:
         Enable: false # Enable the global device limit of a user
         RedisNetwork: tcp # Redis protocol, tcp or unix
