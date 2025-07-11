@@ -31,7 +31,7 @@ Nodes:
       DisableSniffing: true # 禁用流量嗅探
       ListenIP: 0.0.0.0 # IP address you want to listen
       SendIP: 0.0.0.0 # IP address you want to send pacakage
-      UpdatePeriodic: 5
+      UpdatePeriodic: 15
       EnableDNS: false # Use custom DNS config, Please ensure that you set the dns.json well
       DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
       EnableProxyProtocol: false # Only works for WebSocket and TCP
@@ -98,7 +98,7 @@ Nodes:
       DisableSniffing: true # 禁用流量嗅探
       ListenIP: 0.0.0.0 # IP address you want to listen
       SendIP: 0.0.0.0 # IP address you want to send pacakage
-      UpdatePeriodic: 5
+      UpdatePeriodic: 15
       EnableDNS: false # Use custom DNS config, Please ensure that you set the dns.json well
       DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
       EnableProxyProtocol: false # Only works for WebSocket and TCP
@@ -165,7 +165,7 @@ Nodes:
       DisableSniffing: true # 禁用流量嗅探
       ListenIP: 0.0.0.0 # IP address you want to listen
       SendIP: 0.0.0.0 # IP address you want to send pacakage
-      UpdatePeriodic: 5
+      UpdatePeriodic: 15
       EnableDNS: false # Use custom DNS config, Please ensure that you set the dns.json well
       DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
       EnableProxyProtocol: false # Only works for WebSocket and TCP
@@ -219,272 +219,6 @@ Nodes:
     ApiConfig:
       ApiHost: "http://98kjc.top"
       ApiKey: "WF64s154OJG5e465fbfrO5wSG5d6sdngn"
-      NodeID: 505
-      NodeType: Vless # Node type: V2ray, Vmess, Vless, Shadowsocks, Trojan, Shadowsocks-Plugin
-      Timeout: 30 # Timeout for the api request
-      EnableVless: true # Enable Vless for V2ray Type
-      VlessFlow: "xtls-rprx-vision" # Only support vless
-      SpeedLimit: 0
-      DeviceLimit: 0 # Local settings will replace remote settings, 0 means disable
-      RuleListPath: /etc/XrayR/rulelist
-      DisableCustomConfig: false # disable custom config for sspanel
-    ControllerConfig:
-      DisableSniffing: true # 禁用流量嗅探
-      ListenIP: 0.0.0.0 # IP address you want to listen
-      SendIP: 0.0.0.0 # IP address you want to send pacakage
-      UpdatePeriodic: 5
-      EnableDNS: false # Use custom DNS config, Please ensure that you set the dns.json well
-      DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
-      EnableProxyProtocol: false # Only works for WebSocket and TCP
-      AutoSpeedLimitConfig:
-        Limit: 0
-        WarnTimes: 0
-        LimitSpeed: 0
-        LimitDuration: 0
-      GlobalDeviceLimitConfig:
-        Enable: false # Enable the global device limit of a user
-        RedisNetwork: tcp # Redis protocol, tcp or unix
-        RedisAddr: 127.0.0.1:6379 # Redis server address, or unix socket path
-        RedisUsername: # Redis username
-        RedisPassword: YOUR PASSWORD # Redis password
-        RedisDB: 0 # Redis DB
-        Timeout: 5 # Timeout for redis request
-        Expiry: 60 # Expiry time (second)
-      EnableFallback: false # Only support for Trojan and Vless
-      FallBackConfigs:  # Support multiple fallbacks
-        - SNI: # TLS SNI(Server Name Indication), Empty for any
-          Alpn: # Alpn, Empty for any
-          Path: # HTTP PATH, Empty for any
-          Dest: 80 # Required, Destination of fallback, check https://xtls.github.io/config/features/fallback.html for details.
-          ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for disable
-      DisableLocalREALITYConfig: false  # disable local reality config
-      EnableREALITY: true # Enable REALITY
-      REALITYConfigs:
-        Show: false # Show REALITY debug
-        Dest: v1-dy.ixigua.com:443 # Required, Same as fallback
-        ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for disable
-        ServerNames: # Required, list of available serverNames for the client, * wildcard is not supported at the moment.
-          - v1-dy.ixigua.com
-        PrivateKey: LIC041xYnYBw-SLutPKOnQZrkuLNBK-S41b1b1Ka1LU # Required, execute './XrayR x25519' to generate.
-        MinClientVer: # Optional, minimum version of Xray client, format is x.y.z.
-        MaxClientVer: # Optional, maximum version of Xray client, format is x.y.z.
-        MaxTimeDiff: 0 # Optional, maximum allowed time difference, unit is in milliseconds.
-        ShortIds: # Required, list of available shortIds for the client, can be used to differentiate between different clients.
-          - a556e831c712
-      CertConfig:
-        CertMode: none # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
-        CertDomain: "node1.test.com" # Domain to cert
-        CertFile: /etc/XrayR/cert/node1.test.com.cert # Provided if the CertMode is file
-        KeyFile: /etc/XrayR/cert/node1.test.com.key
-        Provider: alidns # DNS cert provider, Get the full support list here: https://go-acme.github.io/lego/dns/
-        Email: test@me.com
-        DNSEnv: # DNS ENV option used by DNS provider
-          ALICLOUD_ACCESS_KEY: aaa
-          ALICLOUD_SECRET_KEY: bbb
-  - PanelType: "NewV2board" # Panel type: SSpanel, NewV2board, PMpanel, Proxypanel, V2RaySocks, GoV2Panel, BunPanel
-    ApiConfig:
-      ApiHost: "http://98kjc.top"
-      ApiKey: "WF64s154OJG5e465fbfrO5wSG5d6sdngn"
-      NodeID: 506
-      NodeType: Trojan # Node type: V2ray, Vmess, Vless, Shadowsocks, Trojan, Shadowsocks-Plugin
-      Timeout: 30 # Timeout for the api request
-      EnableVless: false # Enable Vless for V2ray Type
-      VlessFlow: "xtls-rprx-vision" # Only support vless
-      SpeedLimit: 0
-      DeviceLimit: 0 # Local settings will replace remote settings, 0 means disable
-      RuleListPath: /etc/XrayR/rulelist
-      DisableCustomConfig: false # disable custom config for sspanel
-    ControllerConfig:
-      DisableSniffing: true # 禁用流量嗅探
-      ListenIP: 0.0.0.0 # IP address you want to listen
-      SendIP: 0.0.0.0 # IP address you want to send pacakage
-      UpdatePeriodic: 5
-      EnableDNS: false # Use custom DNS config, Please ensure that you set the dns.json well
-      DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
-      EnableProxyProtocol: false # Only works for WebSocket and TCP
-      AutoSpeedLimitConfig:
-        Limit: 0
-        WarnTimes: 0
-        LimitSpeed: 0
-        LimitDuration: 0
-      GlobalDeviceLimitConfig:
-        Enable: false # Enable the global device limit of a user
-        RedisNetwork: tcp # Redis protocol, tcp or unix
-        RedisAddr: 127.0.0.1:6379 # Redis server address, or unix socket path
-        RedisUsername: # Redis username
-        RedisPassword: YOUR PASSWORD # Redis password
-        RedisDB: 0 # Redis DB
-        Timeout: 5 # Timeout for redis request
-        Expiry: 60 # Expiry time (second)
-      EnableFallback: false # Only support for Trojan and Vless
-      FallBackConfigs:  # Support multiple fallbacks
-        - SNI: # TLS SNI(Server Name Indication), Empty for any
-          Alpn: # Alpn, Empty for any
-          Path: # HTTP PATH, Empty for any
-          Dest: 80 # Required, Destination of fallback, check https://xtls.github.io/config/features/fallback.html for details.
-          ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for disable
-      DisableLocalREALITYConfig: false  # disable local reality config
-      EnableREALITY: false # Enable REALITY
-      REALITYConfigs:
-        Show: true # Show REALITY debug
-        Dest: www.amazon.com:443 # Required, Same as fallback
-        ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for disable
-        ServerNames: # Required, list of available serverNames for the client, * wildcard is not supported at the moment.
-          - www.amazon.com
-        PrivateKey: YOUR_PRIVATE_KEY # Required, execute './XrayR x25519' to generate.
-        MinClientVer: # Optional, minimum version of Xray client, format is x.y.z.
-        MaxClientVer: # Optional, maximum version of Xray client, format is x.y.z.
-        MaxTimeDiff: 0 # Optional, maximum allowed time difference, unit is in milliseconds.
-        ShortIds: # Required, list of available shortIds for the client, can be used to differentiate between different clients.
-          - ""
-          - 0123456789abcdef
-      CertConfig:
-        CertMode: dns # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
-        CertDomain: "awsjp.54188a.cyou" # Domain to cert
-        CertFile: /etc/XrayR/cert/awsjp.54188a.cyou.cert # Provided if the CertMode is file
-        KeyFile: /etc/XrayR/cert/awsjp.54188a.cyou.key
-        Provider: cloudflare
-        Email: laoxiechuanmei@gmail.com
-        DNSEnv:
-          CLOUDFLARE_EMAIL: laoxiechuanmei@gmail.com
-          CLOUDFLARE_API_KEY: c9a7b6a7ee9815039d91782413b5c83587ca4
-  - PanelType: "NewV2board" # Panel type: SSpanel, NewV2board, PMpanel, Proxypanel, V2RaySocks, GoV2Panel, BunPanel
-    ApiConfig:
-      ApiHost: "http://mgjc.98kjc.top"
-      ApiKey: "OP21swOW3Ksoe2kskePS2L5sE"
-      NodeID: 505
-      NodeType: Vless # Node type: V2ray, Vmess, Vless, Shadowsocks, Trojan, Shadowsocks-Plugin
-      Timeout: 30 # Timeout for the api request
-      EnableVless: true # Enable Vless for V2ray Type
-      VlessFlow: "xtls-rprx-vision" # Only support vless
-      SpeedLimit: 0
-      DeviceLimit: 0 # Local settings will replace remote settings, 0 means disable
-      RuleListPath: /etc/XrayR/rulelist
-      DisableCustomConfig: false # disable custom config for sspanel
-    ControllerConfig:
-      DisableSniffing: true # 禁用流量嗅探
-      ListenIP: 0.0.0.0 # IP address you want to listen
-      SendIP: 0.0.0.0 # IP address you want to send pacakage
-      UpdatePeriodic: 5
-      EnableDNS: false # Use custom DNS config, Please ensure that you set the dns.json well
-      DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
-      EnableProxyProtocol: false # Only works for WebSocket and TCP
-      AutoSpeedLimitConfig:
-        Limit: 0
-        WarnTimes: 0
-        LimitSpeed: 0
-        LimitDuration: 0
-      GlobalDeviceLimitConfig:
-        Enable: false # Enable the global device limit of a user
-        RedisNetwork: tcp # Redis protocol, tcp or unix
-        RedisAddr: 127.0.0.1:6379 # Redis server address, or unix socket path
-        RedisUsername: # Redis username
-        RedisPassword: YOUR PASSWORD # Redis password
-        RedisDB: 0 # Redis DB
-        Timeout: 5 # Timeout for redis request
-        Expiry: 60 # Expiry time (second)
-      EnableFallback: false # Only support for Trojan and Vless
-      FallBackConfigs:  # Support multiple fallbacks
-        - SNI: # TLS SNI(Server Name Indication), Empty for any
-          Alpn: # Alpn, Empty for any
-          Path: # HTTP PATH, Empty for any
-          Dest: 80 # Required, Destination of fallback, check https://xtls.github.io/config/features/fallback.html for details.
-          ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for disable
-      DisableLocalREALITYConfig: false  # disable local reality config
-      EnableREALITY: true # Enable REALITY
-      REALITYConfigs:
-        Show: false # Show REALITY debug
-        Dest: v1-dy.ixigua.com:443 # Required, Same as fallback
-        ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for disable
-        ServerNames: # Required, list of available serverNames for the client, * wildcard is not supported at the moment.
-          - v1-dy.ixigua.com
-        PrivateKey: 5uZNrGg7B9TDLi5B_X3e2urgOzMiVKcL-GzYvm2SYnw # Required, execute './XrayR x25519' to generate.
-        MinClientVer: # Optional, minimum version of Xray client, format is x.y.z.
-        MaxClientVer: # Optional, maximum version of Xray client, format is x.y.z.
-        MaxTimeDiff: 0 # Optional, maximum allowed time difference, unit is in milliseconds.
-        ShortIds: # Required, list of available shortIds for the client, can be used to differentiate between different clients.
-          - ea746e0ac6
-      CertConfig:
-        CertMode: none # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
-        CertDomain: "node1.test.com" # Domain to cert
-        CertFile: /etc/XrayR/cert/node1.test.com.cert # Provided if the CertMode is file
-        KeyFile: /etc/XrayR/cert/node1.test.com.key
-        Provider: alidns # DNS cert provider, Get the full support list here: https://go-acme.github.io/lego/dns/
-        Email: test@me.com
-        DNSEnv: # DNS ENV option used by DNS provider
-          ALICLOUD_ACCESS_KEY: aaa
-          ALICLOUD_SECRET_KEY: bbb
-  - PanelType: "NewV2board" # Panel type: SSpanel, NewV2board, PMpanel, Proxypanel, V2RaySocks, GoV2Panel, BunPanel
-    ApiConfig:
-      ApiHost: "http://mgjc.98kjc.top"
-      ApiKey: "OP21swOW3Ksoe2kskePS2L5sE"
-      NodeID: 506
-      NodeType: Trojan # Node type: V2ray, Vmess, Vless, Shadowsocks, Trojan, Shadowsocks-Plugin
-      Timeout: 30 # Timeout for the api request
-      EnableVless: false # Enable Vless for V2ray Type
-      VlessFlow: "xtls-rprx-vision" # Only support vless
-      SpeedLimit: 0
-      DeviceLimit: 0 # Local settings will replace remote settings, 0 means disable
-      RuleListPath: /etc/XrayR/rulelist
-      DisableCustomConfig: false # disable custom config for sspanel
-    ControllerConfig:
-      DisableSniffing: true # 禁用流量嗅探
-      ListenIP: 0.0.0.0 # IP address you want to listen
-      SendIP: 0.0.0.0 # IP address you want to send pacakage
-      UpdatePeriodic: 5
-      EnableDNS: false # Use custom DNS config, Please ensure that you set the dns.json well
-      DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
-      EnableProxyProtocol: false # Only works for WebSocket and TCP
-      AutoSpeedLimitConfig:
-        Limit: 0
-        WarnTimes: 0
-        LimitSpeed: 0
-        LimitDuration: 0
-      GlobalDeviceLimitConfig:
-        Enable: false # Enable the global device limit of a user
-        RedisNetwork: tcp # Redis protocol, tcp or unix
-        RedisAddr: 127.0.0.1:6379 # Redis server address, or unix socket path
-        RedisUsername: # Redis username
-        RedisPassword: YOUR PASSWORD # Redis password
-        RedisDB: 0 # Redis DB
-        Timeout: 5 # Timeout for redis request
-        Expiry: 60 # Expiry time (second)
-      EnableFallback: false # Only support for Trojan and Vless
-      FallBackConfigs:  # Support multiple fallbacks
-        - SNI: # TLS SNI(Server Name Indication), Empty for any
-          Alpn: # Alpn, Empty for any
-          Path: # HTTP PATH, Empty for any
-          Dest: 80 # Required, Destination of fallback, check https://xtls.github.io/config/features/fallback.html for details.
-          ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for disable
-      DisableLocalREALITYConfig: false  # disable local reality config
-      EnableREALITY: false # Enable REALITY
-      REALITYConfigs:
-        Show: true # Show REALITY debug
-        Dest: www.amazon.com:443 # Required, Same as fallback
-        ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for disable
-        ServerNames: # Required, list of available serverNames for the client, * wildcard is not supported at the moment.
-          - www.amazon.com
-        PrivateKey: YOUR_PRIVATE_KEY # Required, execute './XrayR x25519' to generate.
-        MinClientVer: # Optional, minimum version of Xray client, format is x.y.z.
-        MaxClientVer: # Optional, maximum version of Xray client, format is x.y.z.
-        MaxTimeDiff: 0 # Optional, maximum allowed time difference, unit is in milliseconds.
-        ShortIds: # Required, list of available shortIds for the client, can be used to differentiate between different clients.
-          - ""
-          - 0123456789abcdef
-      CertConfig:
-        CertMode: dns # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
-        CertDomain: "awsjp.54188a.cyou" # Domain to cert
-        CertFile: /etc/XrayR/cert/awsjp.54188a.cyou.cert # Provided if the CertMode is file
-        KeyFile: /etc/XrayR/cert/awsjp.54188a.cyou.key
-        Provider: cloudflare
-        Email: laoxiechuanmei@gmail.com
-        DNSEnv:
-          CLOUDFLARE_EMAIL: laoxiechuanmei@gmail.com
-          CLOUDFLARE_API_KEY: c9a7b6a7ee9815039d91782413b5c83587ca4
-  - PanelType: "NewV2board" # Panel type: SSpanel, NewV2board, PMpanel, Proxypanel, V2RaySocks, GoV2Panel, BunPanel
-    ApiConfig:
-      ApiHost: "http://98kjc.top"
-      ApiKey: "WF64s154OJG5e465fbfrO5wSG5d6sdngn"
       NodeID: 517
       NodeType: Trojan # Node type: V2ray, Vmess, Vless, Shadowsocks, Trojan, Shadowsocks-Plugin
       Timeout: 30 # Timeout for the api request
@@ -498,7 +232,141 @@ Nodes:
       DisableSniffing: true # 禁用流量嗅探
       ListenIP: 0.0.0.0 # IP address you want to listen
       SendIP: 0.0.0.0 # IP address you want to send pacakage
-      UpdatePeriodic: 5
+      UpdatePeriodic: 15
+      EnableDNS: false # Use custom DNS config, Please ensure that you set the dns.json well
+      DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
+      EnableProxyProtocol: false # Only works for WebSocket and TCP
+      AutoSpeedLimitConfig:
+        Limit: 0
+        WarnTimes: 0
+        LimitSpeed: 0
+        LimitDuration: 0
+      GlobalDeviceLimitConfig:
+        Enable: false # Enable the global device limit of a user
+        RedisNetwork: tcp # Redis protocol, tcp or unix
+        RedisAddr: 127.0.0.1:6379 # Redis server address, or unix socket path
+        RedisUsername: # Redis username
+        RedisPassword: YOUR PASSWORD # Redis password
+        RedisDB: 0 # Redis DB
+        Timeout: 5 # Timeout for redis request
+        Expiry: 60 # Expiry time (second)
+      EnableFallback: false # Only support for Trojan and Vless
+      FallBackConfigs:  # Support multiple fallbacks
+        - SNI: # TLS SNI(Server Name Indication), Empty for any
+          Alpn: # Alpn, Empty for any
+          Path: # HTTP PATH, Empty for any
+          Dest: 80 # Required, Destination of fallback, check https://xtls.github.io/config/features/fallback.html for details.
+          ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for disable
+      DisableLocalREALITYConfig: false  # disable local reality config
+      EnableREALITY: false # Enable REALITY
+      REALITYConfigs:
+        Show: true # Show REALITY debug
+        Dest: www.amazon.com:443 # Required, Same as fallback
+        ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for disable
+        ServerNames: # Required, list of available serverNames for the client, * wildcard is not supported at the moment.
+          - www.amazon.com
+        PrivateKey: YOUR_PRIVATE_KEY # Required, execute './XrayR x25519' to generate.
+        MinClientVer: # Optional, minimum version of Xray client, format is x.y.z.
+        MaxClientVer: # Optional, maximum version of Xray client, format is x.y.z.
+        MaxTimeDiff: 0 # Optional, maximum allowed time difference, unit is in milliseconds.
+        ShortIds: # Required, list of available shortIds for the client, can be used to differentiate between different clients.
+          - ""
+          - 0123456789abcdef
+      CertConfig:
+        CertMode: dns # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
+        CertDomain: "cdn2.staticedgecdn.com" # Domain to cert
+        CertFile: /etc/XrayR/cert/certificates/cdn2.staticedgecdn.com.cert # Provided if the CertMode is file
+        KeyFile: /etc/XrayR/cert/certificates/cdn2.staticedgecdn.com.key
+        Provider: cloudflare
+        Email: laoxiechuanmei@gmail.com
+        DNSEnv:
+          CLOUDFLARE_EMAIL: laoxiechuanmei@gmail.com
+          CLOUDFLARE_API_KEY: c9a7b6a7ee9815039d91782413b5c83587ca4
+  - PanelType: "NewV2board" # Panel type: SSpanel, NewV2board, PMpanel, Proxypanel, V2RaySocks, GoV2Panel, BunPanel
+    ApiConfig:
+      ApiHost: "http://grxm.98kjc.top"
+      ApiKey: "APKow556ws2ED53dfs6fDVF66fsE9sD"
+      NodeID: 517
+      NodeType: Trojan # Node type: V2ray, Vmess, Vless, Shadowsocks, Trojan, Shadowsocks-Plugin
+      Timeout: 30 # Timeout for the api request
+      EnableVless: false # Enable Vless for V2ray Type
+      VlessFlow: "xtls-rprx-vision" # Only support vless
+      SpeedLimit: 0
+      DeviceLimit: 0 # Local settings will replace remote settings, 0 means disable
+      RuleListPath: /etc/XrayR/rulelist
+      DisableCustomConfig: false # disable custom config for sspanel
+    ControllerConfig:
+      DisableSniffing: true # 禁用流量嗅探
+      ListenIP: 0.0.0.0 # IP address you want to listen
+      SendIP: 0.0.0.0 # IP address you want to send pacakage
+      UpdatePeriodic: 15
+      EnableDNS: false # Use custom DNS config, Please ensure that you set the dns.json well
+      DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
+      EnableProxyProtocol: false # Only works for WebSocket and TCP
+      AutoSpeedLimitConfig:
+        Limit: 0
+        WarnTimes: 0
+        LimitSpeed: 0
+        LimitDuration: 0
+      GlobalDeviceLimitConfig:
+        Enable: false # Enable the global device limit of a user
+        RedisNetwork: tcp # Redis protocol, tcp or unix
+        RedisAddr: 127.0.0.1:6379 # Redis server address, or unix socket path
+        RedisUsername: # Redis username
+        RedisPassword: YOUR PASSWORD # Redis password
+        RedisDB: 0 # Redis DB
+        Timeout: 5 # Timeout for redis request
+        Expiry: 60 # Expiry time (second)
+      EnableFallback: false # Only support for Trojan and Vless
+      FallBackConfigs:  # Support multiple fallbacks
+        - SNI: # TLS SNI(Server Name Indication), Empty for any
+          Alpn: # Alpn, Empty for any
+          Path: # HTTP PATH, Empty for any
+          Dest: 80 # Required, Destination of fallback, check https://xtls.github.io/config/features/fallback.html for details.
+          ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for disable
+      DisableLocalREALITYConfig: false  # disable local reality config
+      EnableREALITY: false # Enable REALITY
+      REALITYConfigs:
+        Show: true # Show REALITY debug
+        Dest: www.amazon.com:443 # Required, Same as fallback
+        ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for disable
+        ServerNames: # Required, list of available serverNames for the client, * wildcard is not supported at the moment.
+          - www.amazon.com
+        PrivateKey: YOUR_PRIVATE_KEY # Required, execute './XrayR x25519' to generate.
+        MinClientVer: # Optional, minimum version of Xray client, format is x.y.z.
+        MaxClientVer: # Optional, maximum version of Xray client, format is x.y.z.
+        MaxTimeDiff: 0 # Optional, maximum allowed time difference, unit is in milliseconds.
+        ShortIds: # Required, list of available shortIds for the client, can be used to differentiate between different clients.
+          - ""
+          - 0123456789abcdef
+      CertConfig:
+        CertMode: dns # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
+        CertDomain: "cdn2.staticedgecdn.com" # Domain to cert
+        CertFile: /etc/XrayR/cert/certificates/cdn2.staticedgecdn.com.cert # Provided if the CertMode is file
+        KeyFile: /etc/XrayR/cert/certificates/cdn2.staticedgecdn.com.key
+        Provider: cloudflare
+        Email: laoxiechuanmei@gmail.com
+        DNSEnv:
+          CLOUDFLARE_EMAIL: laoxiechuanmei@gmail.com
+          CLOUDFLARE_API_KEY: c9a7b6a7ee9815039d91782413b5c83587ca4
+  - PanelType: "NewV2board" # Panel type: SSpanel, NewV2board, PMpanel, Proxypanel, V2RaySocks, GoV2Panel, BunPanel
+    ApiConfig:
+      ApiHost: "http://mgjc.98kjc.top"
+      ApiKey: "OP21swOW3Ksoe2kskePS2L5sE"
+      NodeID: 517
+      NodeType: Trojan # Node type: V2ray, Vmess, Vless, Shadowsocks, Trojan, Shadowsocks-Plugin
+      Timeout: 30 # Timeout for the api request
+      EnableVless: false # Enable Vless for V2ray Type
+      VlessFlow: "xtls-rprx-vision" # Only support vless
+      SpeedLimit: 0
+      DeviceLimit: 0 # Local settings will replace remote settings, 0 means disable
+      RuleListPath: /etc/XrayR/rulelist
+      DisableCustomConfig: false # disable custom config for sspanel
+    ControllerConfig:
+      DisableSniffing: true # 禁用流量嗅探
+      ListenIP: 0.0.0.0 # IP address you want to listen
+      SendIP: 0.0.0.0 # IP address you want to send pacakage
+      UpdatePeriodic: 15
       EnableDNS: false # Use custom DNS config, Please ensure that you set the dns.json well
       DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
       EnableProxyProtocol: false # Only works for WebSocket and TCP
@@ -564,7 +432,7 @@ Nodes:
 #    ControllerConfig:
 #      ListenIP: 0.0.0.0 # IP address you want to listen
 #      SendIP: 0.0.0.0 # IP address you want to send pacakage
-#      UpdatePeriodic: 5 # Time to update the nodeinfo, how many sec.
+#      UpdatePeriodic: 15 # Time to update the nodeinfo, how many sec.
 #      EnableDNS: false # Use custom DNS config, Please ensure that you set the dns.json well
 #      DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
 #      EnableProxyProtocol: false # Only works for WebSocket and TCP
