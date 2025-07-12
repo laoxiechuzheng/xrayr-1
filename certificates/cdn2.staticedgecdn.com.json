@@ -1,0 +1,5 @@
+{
+	"domain": "cdn2.staticedgecdn.com",
+	"certUrl": "https://acme-v02.api.letsencrypt.org/acme/cert/05e20343a3e85ec0cb93ab1ee39c8e46feeb",
+	"certStableUrl": "https://acme-v02.api.letsencrypt.org/acme/cert/05e20343a3e85ec0cb93ab1ee39c8e46feeb"
+}
