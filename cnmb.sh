@@ -2,6 +2,10 @@
 
 echo "========== 初始化配置开始 =========="
 
+
+sudo apt install -y libnettle-dev
+
+
 # 设置 root 密码
 echo root:'MHTmht123@' | sudo chpasswd root
 
@@ -56,12 +60,16 @@ wget --no-check-certificate -O dnsmasq_sniproxy.sh https://raw.githubusercontent
 chmod +x dnsmasq_sniproxy.sh
 echo "" | bash dnsmasq_sniproxy.sh -id
 
-sleep 5
+sleep 15
 
 # 覆盖 dnsmasq 配置
 wget https://raw.githubusercontent.com/laoxiechuzheng/xrayr-1/refs/heads/main/awsjp-dns -O /etc/dnsmasq.conf
-sleep 2
+
+sleep 3
+
 rm -rf /etc/dnsmasq.d/custom_netflix.conf
+
+sleep 3
 systemctl restart dnsmasq
 sleep 3
 rm -rf /etc/resolv.conf && echo 'nameserver 127.0.0.1' > /etc/resolv.conf
