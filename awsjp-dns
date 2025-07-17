@@ -5,8 +5,8 @@ filter-AAAA
 #no-poll
 #all-servers
 #server=10.10.10.10
-server=8.8.8.8
 server=1.1.1.1
+server=8.8.8.8
 #server=156.224.77.255
 #server=4.2.2.1
 cache-size=2048
