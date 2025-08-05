@@ -28,16 +28,16 @@ Nodes:
     ControllerConfig:
       ListenIP: 0.0.0.0 # IP address you want to listen
       SendIP: 0.0.0.0 # IP address you want to send pacakage
-      UpdatePeriodic: 15 # Time to update the nodeinfo, how many sec.
+      UpdatePeriodic: 3 # Time to update the nodeinfo, how many sec.
       DeviceOnlineMinTraffic: 100 # V2board面板设备数限制统计阈值，大于此流量时上报设备数在线，单位kB，不填则默认上报
       EnableDNS: false # Use custom DNS config, Please ensure that you set the dns.json well
       DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
       EnableProxyProtocol: false # Only works for WebSocket and TCP
       AutoSpeedLimitConfig:
-        Limit: 0 # Warned speed. Set to 0 to disable AutoSpeedLimit (mbps)
+        Limit: 290 # Warned speed. Set to 0 to disable AutoSpeedLimit (mbps)
         WarnTimes: 0 # After (WarnTimes) consecutive warnings, the user will be limited. Set to 0 to punish overspeed user immediately.
-        LimitSpeed: 0 # The speedlimit of a limited user (unit: mbps)
-        LimitDuration: 0 # How many minutes will the limiting last (unit: minute)
+        LimitSpeed: 100 # The speedlimit of a limited user (unit: mbps)
+        LimitDuration: 30 # How many minutes will the limiting last (unit: minute)
       GlobalDeviceLimitConfig:
         Enable: false # Enable the global device limit of a user
         RedisNetwork: tcp # Redis protocol, tcp or unix
@@ -70,9 +70,9 @@ Nodes:
           - ""
       CertConfig:
         CertMode: dns # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
-        CertDomain: "cdn2.staticedgecdn.com" # Domain to cert
-        CertFile: /etc/XrayR/cert/certificates/cdn2.staticedgecdn.com.cert # Provided if the CertMode is file
-        KeyFile: /etc/XrayR/cert/certificates/cdn2.staticedgecdn.com.key
+        CertDomain: "cdn9.staticedgecdn.com" # Domain to cert
+        CertFile: /etc/XrayR/cert/certificates/cdn9.staticedgecdn.com.cert # Provided if the CertMode is file
+        KeyFile: /etc/XrayR/cert/certificates/cdn9.staticedgecdn.com.key
         Provider: cloudflare
         Email: laoxiechuanmei@gmail.com
         DNSEnv:
@@ -93,16 +93,16 @@ Nodes:
     ControllerConfig:
       ListenIP: 0.0.0.0 # IP address you want to listen
       SendIP: 0.0.0.0 # IP address you want to send pacakage
-      UpdatePeriodic: 15 # Time to update the nodeinfo, how many sec.
+      UpdatePeriodic: 3 # Time to update the nodeinfo, how many sec.
       DeviceOnlineMinTraffic: 100 # V2board面板设备数限制统计阈值，大于此流量时上报设备数在线，单位kB，不填则默认上报
       EnableDNS: false # Use custom DNS config, Please ensure that you set the dns.json well
       DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
       EnableProxyProtocol: false # Only works for WebSocket and TCP
       AutoSpeedLimitConfig:
-        Limit: 0 # Warned speed. Set to 0 to disable AutoSpeedLimit (mbps)
+        Limit: 290 # Warned speed. Set to 0 to disable AutoSpeedLimit (mbps)
         WarnTimes: 0 # After (WarnTimes) consecutive warnings, the user will be limited. Set to 0 to punish overspeed user immediately.
-        LimitSpeed: 0 # The speedlimit of a limited user (unit: mbps)
-        LimitDuration: 0 # How many minutes will the limiting last (unit: minute)
+        LimitSpeed: 100 # The speedlimit of a limited user (unit: mbps)
+        LimitDuration: 30 # How many minutes will the limiting last (unit: minute)
       GlobalDeviceLimitConfig:
         Enable: false # Enable the global device limit of a user
         RedisNetwork: tcp # Redis protocol, tcp or unix
@@ -135,9 +135,9 @@ Nodes:
           - ""
       CertConfig:
         CertMode: dns # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
-        CertDomain: "cdn2.staticedgecdn.com" # Domain to cert
-        CertFile: /etc/XrayR/cert/certificates/cdn2.staticedgecdn.com.cert # Provided if the CertMode is file
-        KeyFile: /etc/XrayR/cert/certificates/cdn2.staticedgecdn.com.key
+        CertDomain: "cdn9.staticedgecdn.com" # Domain to cert
+        CertFile: /etc/XrayR/cert/certificates/cdn9.staticedgecdn.com.cert # Provided if the CertMode is file
+        KeyFile: /etc/XrayR/cert/certificates/cdn9.staticedgecdn.com.key
         Provider: cloudflare
         Email: laoxiechuanmei@gmail.com
         DNSEnv:
@@ -158,16 +158,16 @@ Nodes:
     ControllerConfig:
       ListenIP: 0.0.0.0 # IP address you want to listen
       SendIP: 0.0.0.0 # IP address you want to send pacakage
-      UpdatePeriodic: 15 # Time to update the nodeinfo, how many sec.
+      UpdatePeriodic: 3 # Time to update the nodeinfo, how many sec.
       DeviceOnlineMinTraffic: 100 # V2board面板设备数限制统计阈值，大于此流量时上报设备数在线，单位kB，不填则默认上报
       EnableDNS: false # Use custom DNS config, Please ensure that you set the dns.json well
       DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
       EnableProxyProtocol: false # Only works for WebSocket and TCP
       AutoSpeedLimitConfig:
-        Limit: 0 # Warned speed. Set to 0 to disable AutoSpeedLimit (mbps)
+        Limit: 290 # Warned speed. Set to 0 to disable AutoSpeedLimit (mbps)
         WarnTimes: 0 # After (WarnTimes) consecutive warnings, the user will be limited. Set to 0 to punish overspeed user immediately.
-        LimitSpeed: 0 # The speedlimit of a limited user (unit: mbps)
-        LimitDuration: 0 # How many minutes will the limiting last (unit: minute)
+        LimitSpeed: 100 # The speedlimit of a limited user (unit: mbps)
+        LimitDuration: 30 # How many minutes will the limiting last (unit: minute)
       GlobalDeviceLimitConfig:
         Enable: false # Enable the global device limit of a user
         RedisNetwork: tcp # Redis protocol, tcp or unix
@@ -200,9 +200,9 @@ Nodes:
           - ""
       CertConfig:
         CertMode: dns # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
-        CertDomain: "cdn2.staticedgecdn.com" # Domain to cert
-        CertFile: /etc/XrayR/cert/certificates/cdn2.staticedgecdn.com.cert # Provided if the CertMode is file
-        KeyFile: /etc/XrayR/cert/certificates/cdn2.staticedgecdn.com.key
+        CertDomain: "cdn9.staticedgecdn.com" # Domain to cert
+        CertFile: /etc/XrayR/cert/certificates/cdn9.staticedgecdn.com.cert # Provided if the CertMode is file
+        KeyFile: /etc/XrayR/cert/certificates/cdn9.staticedgecdn.com.key
         Provider: cloudflare
         Email: laoxiechuanmei@gmail.com
         DNSEnv:
