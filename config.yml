@@ -34,9 +34,9 @@ Nodes:
       DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
       EnableProxyProtocol: false # Only works for WebSocket and TCP
       AutoSpeedLimitConfig:
-        Limit: 190 # Warned speed. Set to 0 to disable AutoSpeedLimit (mbps)
+        Limit: 350 # Warned speed. Set to 0 to disable AutoSpeedLimit (mbps)
         WarnTimes: 0 # After (WarnTimes) consecutive warnings, the user will be limited. Set to 0 to punish overspeed user immediately.
-        LimitSpeed: 90 # The speedlimit of a limited user (unit: mbps)
+        LimitSpeed: 195 # The speedlimit of a limited user (unit: mbps)
         LimitDuration: 30 # How many minutes will the limiting last (unit: minute)
       GlobalDeviceLimitConfig:
         Enable: false # Enable the global device limit of a user
@@ -69,10 +69,10 @@ Nodes:
         ShortIds: # 可不填
           - ""
       CertConfig:
-        CertMode: dns # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
-        CertDomain: "cdn9.staticedgecdn.com" # Domain to cert
-        CertFile: /etc/XrayR/cert/certificates/cdn9.staticedgecdn.com.cert # Provided if the CertMode is file
-        KeyFile: /etc/XrayR/cert/certificates/cdn9.staticedgecdn.com.key
+        CertMode: file # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
+        CertDomain: "scdn.staticedgecdn.com" # Domain to cert
+        CertFile: /etc/XrayR/cert/certificates/scdn.staticedgecdn.com.crt # Provided if the CertMode is file
+        KeyFile: /etc/XrayR/cert/certificates/scdn.staticedgecdn.com.key
         Provider: cloudflare
         Email: laoxiechuanmei@gmail.com
         DNSEnv:
@@ -99,9 +99,9 @@ Nodes:
       DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
       EnableProxyProtocol: false # Only works for WebSocket and TCP
       AutoSpeedLimitConfig:
-        Limit: 190 # Warned speed. Set to 0 to disable AutoSpeedLimit (mbps)
+        Limit: 350 # Warned speed. Set to 0 to disable AutoSpeedLimit (mbps)
         WarnTimes: 0 # After (WarnTimes) consecutive warnings, the user will be limited. Set to 0 to punish overspeed user immediately.
-        LimitSpeed: 90 # The speedlimit of a limited user (unit: mbps)
+        LimitSpeed: 195 # The speedlimit of a limited user (unit: mbps)
         LimitDuration: 30 # How many minutes will the limiting last (unit: minute)
       GlobalDeviceLimitConfig:
         Enable: false # Enable the global device limit of a user
@@ -134,10 +134,10 @@ Nodes:
         ShortIds: # 可不填
           - ""
       CertConfig:
-        CertMode: dns # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
-        CertDomain: "cdn9.staticedgecdn.com" # Domain to cert
-        CertFile: /etc/XrayR/cert/certificates/cdn9.staticedgecdn.com.cert # Provided if the CertMode is file
-        KeyFile: /etc/XrayR/cert/certificates/cdn9.staticedgecdn.com.key
+        CertMode: file # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
+        CertDomain: "scdn.staticedgecdn.com" # Domain to cert
+        CertFile: /etc/XrayR/cert/certificates/scdn.staticedgecdn.com.crt # Provided if the CertMode is file
+        KeyFile: /etc/XrayR/cert/certificates/scdn.staticedgecdn.com.key
         Provider: cloudflare
         Email: laoxiechuanmei@gmail.com
         DNSEnv:
@@ -164,9 +164,9 @@ Nodes:
       DNSType: AsIs # AsIs, UseIP, UseIPv4, UseIPv6, DNS strategy
       EnableProxyProtocol: false # Only works for WebSocket and TCP
       AutoSpeedLimitConfig:
-        Limit: 190 # Warned speed. Set to 0 to disable AutoSpeedLimit (mbps)
+        Limit: 350 # Warned speed. Set to 0 to disable AutoSpeedLimit (mbps)
         WarnTimes: 0 # After (WarnTimes) consecutive warnings, the user will be limited. Set to 0 to punish overspeed user immediately.
-        LimitSpeed: 90 # The speedlimit of a limited user (unit: mbps)
+        LimitSpeed: 195 # The speedlimit of a limited user (unit: mbps)
         LimitDuration: 30 # How many minutes will the limiting last (unit: minute)
       GlobalDeviceLimitConfig:
         Enable: false # Enable the global device limit of a user
@@ -199,10 +199,10 @@ Nodes:
         ShortIds: # 可不填
           - ""
       CertConfig:
-        CertMode: dns # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
-        CertDomain: "cdn9.staticedgecdn.com" # Domain to cert
-        CertFile: /etc/XrayR/cert/certificates/cdn9.staticedgecdn.com.cert # Provided if the CertMode is file
-        KeyFile: /etc/XrayR/cert/certificates/cdn9.staticedgecdn.com.key
+        CertMode: file # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
+        CertDomain: "scdn.staticedgecdn.com" # Domain to cert
+        CertFile: /etc/XrayR/cert/certificates/scdn.staticedgecdn.com.crt # Provided if the CertMode is file
+        KeyFile: /etc/XrayR/cert/certificates/scdn.staticedgecdn.com.key
         Provider: cloudflare
         Email: laoxiechuanmei@gmail.com
         DNSEnv:
@@ -262,7 +262,7 @@ Nodes:
 #          - ""
 #          - 0123456789abcdef
 #      CertConfig:
-#        CertMode: dns # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
+#        CertMode: file # Option about how to get certificate: none, file, http, tls, dns. Choose "none" will forcedly disable the tls config.
 #        CertDomain: "node1.test.com" # Domain to cert
 #        CertFile: /etc/XrayR/cert/node1.test.com.cert # Provided if the CertMode is file
 #        KeyFile: /etc/XrayR/cert/node1.test.com.key
