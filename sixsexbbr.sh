@@ -56,6 +56,7 @@ net.ipv4.udp_mem=262144 1048576 4194304
 net.ipv4.tcp_congestion_control=bbr
 net.core.default_qdisc=fq
 net.ipv4.ping_group_range=0 2147483647
+net.ipv4.icmp_ratelimit=100
 
 net.netfilter.nf_conntrack_max=1048576
 net.netfilter.nf_conntrack_tcp_timeout_established=7200
